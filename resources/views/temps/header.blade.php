@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Dashboard</title>
+  <title>WarriorsStorage</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="css/skins/_all-skins.min.css">
   <!-- Morris chart -->
   <link rel="stylesheet" href="css/morris.js/morris.css">
+  <!-- Scafolding-->
+  <link rel="stylesheet" href="css/bootstrap/less/scaffolding.less">
   <!-- jvectormap -->
   <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
   <!-- Date Picker -->
@@ -150,23 +152,23 @@
         <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-files-o"></i>
+            <i class="fa fa-home"></i>
             <span>Home</span>
             </a>
           </li>
         <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>Companies</span>
+          <a href="{{ route('show.companies') }}">
+            <i class="fa fa-building"></i> <span>Companies</span>
           </a>
         </li>
         <li>
           <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>License</span>
+            <i class="fa fa-file"></i> <span>License</span>
           </a>
         </li>
         <li>
           <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>Dictionary</span>
+            <i class="fa fa-book"></i> <span>Dictionary</span>
           </a>
         </li>
       </ul>
@@ -174,7 +176,19 @@
     <!-- /.sidebar -->
   </aside>
   @yield('content')
-
+  
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.12
+    </div>
+    <strong>Copyright &copy; 2019 <a href="https://warriorslabs.com/">Warrior Lab's</a>.</strong> All rights
+    reserved.
+  </footer> 
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
   <!-- jQuery 3 -->
 <script src="js/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
