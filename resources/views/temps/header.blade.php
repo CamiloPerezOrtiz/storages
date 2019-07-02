@@ -7,20 +7,20 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ asset('css/bootstrap/dist/css/bootstrap.min.css') }}">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="css/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="{{ asset('css/Ionicons/css/ionicons.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="css/AdminLTE.css">
+  <link rel="stylesheet" href="{{ asset('css/AdminLTE.css') }}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="{{ asset('css/skins/_all-skins.min.css') }}">
   <!-- Morris chart -->
-  <link rel="stylesheet" href="css/morris.js/morris.css">
+  <link rel="stylesheet" href="{{ asset('css/morris.js/morris.css') }}">
   <!-- Scafolding-->
-  <link rel="stylesheet" href="css/bootstrap/less/scaffolding.less">
+  <link rel="stylesheet" href="{{ asset('css/bootstrap/less/scaffolding.less') }}">
   <!-- jvectormap -->
   <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
   <!-- Date Picker -->
@@ -28,7 +28,7 @@
   <!-- Daterange picker -->
   <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <link rel="stylesheet" href="{{ asset('css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -105,7 +105,7 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="img/pr.jpg" class="user-image" alt="User Image">
+              <img src="{{ asset('img/pr.jpg') }}" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
@@ -140,7 +140,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="img/pr.jpg" class="img-circle" alt="User Image">
+          <img src="{{ asset('img/pr.jpg') }}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -176,7 +176,7 @@
     <!-- /.sidebar -->
   </aside>
   @yield('content')
-  
+
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.12
@@ -198,34 +198,34 @@
   $.widget.bridge('uibutton', $.ui.button);
 </script>
 <!-- Bootstrap 3.3.7 -->
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!-- Morris.js charts -->
-<script src="js/raphael.min.js"></script>
-<script src="js/morris.min.js"></script>
+<script src="{{ asset('js/raphael.min.js') }}"></script>
+<script src="{{ asset('js/morris.min.js') }}"></script>
 <!-- Sparkline -->
-<script src="js/jquery.sparkline.min.js"></script>
+<script src="{{ asset('js/jquery.sparkline.min.js') }}"></script>
 <!-- jvectormap -->
-<script src="js/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="js/jquery-jvectormap-world-mill-en.js"></script>
+<script src="{{ asset('js/jquery-jvectormap-1.2.2.min.js') }}"></script>
+<script src="{{ asset('js/jquery-jvectormap-world-mill-en.js') }}"></script>
 <!-- jQuery Knob Chart -->
-<script src="js/jquery.knob.min.js"></script>
+<script src="{{ asset('js/jquery.knob.min.js') }}"></script>
 <!-- daterangepicker -->
-<script src="js/moment.min.js"></script>
+<script src="{{ asset('js/moment.min.js') }}"></script>
 <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- datepicker -->
 <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="js/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="{{ asset('js/bootstrap3-wysihtml5.all.min.js') }}"></script>
 <!-- Slimscroll -->
-<script src="js/jquery.slimscroll.min.js"></script>
+<script src="{{ asset('js/jquery.slimscroll.min.js') }}"></script>
 <!-- FastClick -->
-<script src="js/fastclick.js"></script>
+<script src="{{ asset('js/fastclick.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="js/adminlte.min.js"></script>
+<script src="{{ asset('js/adminlte.min.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="js/dashboard.js"></script>
+<script src="{{ asset('js/dashboard.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="js/demo.js"></script>
+<script src="{{ asset('js/demo.js') }}"></script>
 @yield('file_js')
 </body>
 </html>

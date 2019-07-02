@@ -20,3 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 #COMPANY#
 Route::get('/show-companies', 'CompanyController@Companies')->name('show.companies');
+#USERS#
+Route::get('/show-users/{id}','UserController@users')->name('show.users');
+Route::get('/add-user/{id}','UserController@addUser')->name('add.user');

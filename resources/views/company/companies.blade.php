@@ -33,7 +33,7 @@
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-stacked">
-                <li><a href="#">Users <span></a></li>
+                <li><a href="{{ route('show.users',$company->id) }}">Users <span></a></li>
                 <li><a href="#">Contacts </a></li>
                 <li><a href="#">Edit <span></a></li>
                 <li><a href="#">Delete </span></a></li>
@@ -48,6 +48,5 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  
 @endsection
 
