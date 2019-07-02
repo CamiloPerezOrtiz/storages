@@ -13,7 +13,24 @@
         <li class="active">Companies</li>
       </ol>
     </section>
-
+    @if (session('editar'))
+    <div class="alert alert-success alert-success-style1">
+        <button type="button" class="close sucess-op" data-dismiss="alert" aria-label="Close">
+            <span class="icon-sc-cl" aria-hidden="true">&times;</span>
+        </button>
+        <i class="fa fa-check adminpro-checked-pro admin-check-pro" aria-hidden="true"></i>
+        <p><strong>Success!</strong> {{ session('editar') }}</p>
+    </div>
+    @endif
+    @if (session('eliminar'))
+    <div class="alert alert-success alert-success-style1">
+        <button type="button" class="close sucess-op" data-dismiss="alert" aria-label="Close">
+            <span class="icon-sc-cl" aria-hidden="true">&times;</span>
+        </button>
+        <i class="fa fa-check adminpro-checked-pro admin-check-pro" aria-hidden="true"></i>
+        <p><strong>Success!</strong> {{ session('eliminar') }}</p>
+    </div>
+    @endif
     <!-- Main content -->
     <section class="content">
       <!-- Small boxes (Stat box) -->
@@ -34,8 +51,8 @@
             <div class="box-footer no-padding">
               <ul class="nav nav-stacked">
                 <li><a href="{{ route('show.users',$company->id) }}">Users <span></a></li>
-                <li><a href="#">Edit <span></a></li>
-                <li><a href="#">Delete </span></a></li>
+                <li><a href="{{ route('edit.company',$company->id) }}"">Edit <span></a></li>
+                <li><a href="{{ route('delete.company',$company->id) }}" onclick="return confirm('Are you sure you want to delete this company?\nDeleting will cause all users and license to be deleted')">Delete </span></a></li>
               </ul>
             </div>
           </div>

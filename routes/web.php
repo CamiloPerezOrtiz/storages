@@ -20,6 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 #COMPANY#
 Route::get('/show-companies', 'CompanyController@Companies')->name('show.companies');
+Route::get('/edit-company/{id}','CompanyController@editCompany')->name('edit.company');
+Route::post('/update-company/{id}','CompanyController@updateCompanyPost')->name('editCompanyPost');
+Route::get('/delete-user/{id}','CompanyController@deleteCompany')->name('delete.company');
 #USERS#
 Route::get('/show-users/{id}','UserController@users')->name('show.users');
 Route::get('/add-user/{id}','UserController@addUser')->name('add.user');
