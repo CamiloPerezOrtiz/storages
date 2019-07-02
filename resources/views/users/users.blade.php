@@ -10,10 +10,37 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Company</li>
         <li class="active">Users</li>
       </ol>
     </section>
-
+    @if (session('agregar'))
+    <div class="alert alert-success alert-success-style1">
+        <button type="button" class="close sucess-op" data-dismiss="alert" aria-label="Close">
+            <span class="icon-sc-cl" aria-hidden="true">&times;</span>
+        </button>
+        <i class="fa fa-check adminpro-checked-pro admin-check-pro" aria-hidden="true"></i>
+        <p><strong>Success!</strong> {{ session('agregar') }}</p>
+    </div>
+    @endif
+    @if (session('eliminar'))
+    <div class="alert alert-success alert-success-style1">
+        <button type="button" class="close sucess-op" data-dismiss="alert" aria-label="Close">
+            <span class="icon-sc-cl" aria-hidden="true">&times;</span>
+        </button>
+        <i class="fa fa-check adminpro-checked-pro admin-check-pro" aria-hidden="true"></i>
+        <p><strong>Success!</strong> {{ session('eliminar') }}</p>
+    </div>
+    @endif
+    @if (session('editar'))
+    <div class="alert alert-success alert-success-style1">
+        <button type="button" class="close sucess-op" data-dismiss="alert" aria-label="Close">
+            <span class="icon-sc-cl" aria-hidden="true">&times;</span>
+        </button>
+        <i class="fa fa-check adminpro-checked-pro admin-check-pro" aria-hidden="true"></i>
+        <p><strong>Success!</strong> {{ session('editar') }}</p>
+    </div>
+    @endif
     <!-- Main content -->
     <section class="content">
       <!-- Small boxes (Stat box) -->
@@ -22,7 +49,7 @@
         <div class="box">
             <div class="box-header">
                 <a href="{{ route('show.companies') }}"><button class="btn btn-primary">Back</button></a>
-                <a href="{{ route('add.user',$id_company) }}""><button class="btn btn-success">Add user</button></a>
+                <a href="{{ route('add.user',$id) }}""><button class="btn btn-success">Add user</button></a>
             </div>
                 <!-- /.box-header -->
             <div class="box-body">
@@ -46,13 +73,14 @@
                             <td>{{ $users->space  }}</td>
                             <td>{{ $users->role  }}</td>
                             <td>
-                            <center><button class="btn  btn-warning">Edit</button>
-                                    <button class="btn  btn-danger">Delete</button>
+                            <center><a href="{{ route('edit.user',$users->id) }}"><button class="btn  btn-warning">Edit</button></a>
+                                    <a href="{{ route('delete.user',$users->id) }}" onclick="return confirm('Are you sure you want to delete this user?\nAll data will be deleted!')"><button class="btn  btn-danger" >Delete</button></a>
                             </td>
                         </tr>
                         @endforeach
                     </tfoot>
                 </table>
+                {!! $company_users->render() !!}
                 </div>
                 <!-- /.box-body -->
             </div> 

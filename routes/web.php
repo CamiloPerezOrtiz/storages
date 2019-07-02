@@ -23,3 +23,7 @@ Route::get('/show-companies', 'CompanyController@Companies')->name('show.compani
 #USERS#
 Route::get('/show-users/{id}','UserController@users')->name('show.users');
 Route::get('/add-user/{id}','UserController@addUser')->name('add.user');
+Route::post('/create-user','UserController@addUserPost')->name('createUserPost');
+Route::get('/user-delete/{id}','UserController@deleteUser')->name('delete.user');
+Route::get('/user-edit/{id}','UserController@editUser')->name('edit.user');
+Route::post('/user-update/{id}','UserController@updateUserPost')->name('editUserPost');
