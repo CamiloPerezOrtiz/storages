@@ -19,7 +19,7 @@
       <!-- Small boxes (Stat box) -->
       <div class="row">
         <div class="col-xs-12">
-            <div class="box box-info">
+            <div class="box box-danger">
                 <div class="box-header with-border">
                     <h3 class="box-title">Update company information</h3>
                         @if (count($errors) > 0)

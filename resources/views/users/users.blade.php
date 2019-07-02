@@ -23,7 +23,7 @@
         <p><strong>Success!</strong> {{ session('agregar') }}</p>
     </div>
     @endif
-    @if (session('eliminar'))
+    @if (session('eliminarr'))
     <div class="alert alert-success alert-success-style1">
         <button type="button" class="close sucess-op" data-dismiss="alert" aria-label="Close">
             <span class="icon-sc-cl" aria-hidden="true">&times;</span>
@@ -46,7 +46,7 @@
       <!-- Small boxes (Stat box) -->
       <div class="row">
       <div class="col-xs-12">
-        <div class="box">
+        <div class="box box-warning">
             <div class="box-header">
                 <a href="{{ route('show.companies') }}"><button class="btn btn-primary">Back</button></a>
                 <a href="{{ route('add.user',$id) }}""><button class="btn btn-success">Add user</button></a>

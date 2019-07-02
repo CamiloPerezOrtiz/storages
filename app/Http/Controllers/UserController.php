@@ -46,13 +46,13 @@ class UserController extends Controller
         $user->company_id = $request->company;
         $user->save();
 
-        return redirect()->route('show.users',$user->company_id)->with('agregar',"El usuario se ha agregado.");
+        return redirect()->route('show.users',$user->company_id)->with('agregar',"The user has been added.");
     }
     #ELIMINAR USUARIO#
     public function deleteUser($id)
     {
         $user = Users::find($id)->delete();
-        return Redirect::back()->with('eliminar',"El usuario se ha eliminado.");
+        return Redirect::back()->with('eliminar',"The user has been deleted.");
     }
     #FORMULARIO PARA EDITAR EL USUARIO#
     public function editUser($id)
@@ -79,6 +79,6 @@ class UserController extends Controller
         $user->company_id = $request->company;
         $user->save();
 
-        return redirect()->route('show.users',$user->company_id)->with('editar',"El usuario se ha modificado.");
+        return redirect()->route('show.users',$user->company_id)->with('editar',"The user has been updated.");
     }
 }

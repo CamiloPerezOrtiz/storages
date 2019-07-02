@@ -30,3 +30,7 @@ Route::post('/create-user','UserController@addUserPost')->name('createUserPost')
 Route::get('/user-delete/{id}','UserController@deleteUser')->name('delete.user');
 Route::get('/user-edit/{id}','UserController@editUser')->name('edit.user');
 Route::post('/user-update/{id}','UserController@updateUserPost')->name('editUserPost');
+#LICENSE#
+Route::get('/show-licenses','LicenseController@licenses')->name('show.licenses');
+Route::get('/license-edit/{id}','LicenseController@editLicense')->name('edit.license');
+Route::get('/license-delete/{id}','LicenseController@deleteLicense')->name('delete.license');

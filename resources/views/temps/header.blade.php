@@ -162,7 +162,7 @@
           </a>
         </li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="{{ route('show.licenses') }}">
             <i class="fa fa-file"></i> <span>License</span>
           </a>
         </li>
@@ -181,7 +181,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.12
     </div>
-    <strong>Copyright &copy; 2019 <a href="https://warriorslabs.com/">Warrior Lab's</a>.</strong> All rights
+    <strong>Copyright &copy; 2019 <a href="https://warriorslabs.com/">Warrior Labs</a>.</strong> All rights
     reserved.
   </footer> 
   <!-- Add the sidebar's background. This div must be placed
