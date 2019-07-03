@@ -5,6 +5,7 @@ use DB;
 use Redirect;
 use App\Company;
 use App\Users;
+use App\Catalog;
 
 use Illuminate\Http\Request;
 
@@ -80,5 +81,32 @@ class UserController extends Controller
         $user->save();
 
         return redirect()->route('show.users',$user->company_id)->with('editar',"The user has been updated.");
+    }
+
+    #################FUNCIONES PARA EL CATALOGO#############
+    #MOSTRAR TODOS LOS CAMPOS DE LA BD#
+    public function catalog()
+    {
+        $user_catalog = Catalog::orderBy('quantity','Asc')->paginate(5);
+        return view('catalog.catalog',compact('user_catalog'));
+    }
+    #AGREGAR UN NUEVO CAMPO A LA BD DE CATALOGOS#
+    public function addCatalogPost(Request $request)
+    {
+        $this->validate($request,[
+            'quantity'  => 'numeric'
+        ]);
+
+        $catalog = new Catalog;
+        $catalog->quantity = $request->quantity;
+        $catalog->save();
+
+        return back()->with('user_catalog' ,'Data inserted Successfully');  
+    }
+    #ELIMINAR UN CATALOGO#
+    public function catalogDelete($id)
+    {
+        $catalog = Catalog::find($id)->delete();
+        return back()->with('delete_catalog' ,'Data deleted Successfully');  
     }
 }

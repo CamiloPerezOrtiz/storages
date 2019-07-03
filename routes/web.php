@@ -30,6 +30,10 @@ Route::post('/create-user','UserController@addUserPost')->name('createUserPost')
 Route::get('/user-delete/{id}','UserController@deleteUser')->name('delete.user');
 Route::get('/user-edit/{id}','UserController@editUser')->name('edit.user');
 Route::post('/user-update/{id}','UserController@updateUserPost')->name('editUserPost');
+#USER CATALOG#
+Route::get('/user-catalog','UserController@catalog')->name('user.catalog');
+Route::post('/add-user-catalog','UserController@addCatalogPost')->name('add.catalog');
+Route::get('/delete-catalog/{id}','UserController@catalogDelete')->name('delete.catalog');
 #LICENSE#
 Route::get('/show-licenses','LicenseController@licenses')->name('show.licenses');
 Route::get('/license-edit/{id}','LicenseController@editLicense')->name('edit.license');

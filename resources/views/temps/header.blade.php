@@ -171,6 +171,11 @@
             <i class="fa fa-book"></i> <span>Dictionary</span>
           </a>
         </li>
+        <li>
+          <a href="{{ route('user.catalog') }}">
+            <i class="fa fa-user"></i> <span>User Catalog</span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->
