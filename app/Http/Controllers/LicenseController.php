@@ -19,16 +19,24 @@ class LicenseController extends Controller
                             INNER JOIN companies USING (id);");
         return view('license.licenses',compact('licenses'));
     }
+
     #ELIMINAR UNA LICENCIA#
     public function deleteLicense($id)
     {
         $license = License::find($id)->delete();
         return Redirect::back()->with('eliminar',"The license has been deleted");
     }
+
     #EDITAR CAMPOS DE LA LICENCIA EN LA BD#
     public function editLicense($id)
     {
         $license = License::find($id);
         return view('license.edit_license',compact('license'));
+    }
+
+    #WIZAR PARA AGREGAR UNA LICENCIA JUANTO AL REGISTRO DE COMPAÑIA#
+    public function addLicense()
+    {
+        die();
     }
 }
