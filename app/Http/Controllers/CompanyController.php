@@ -15,12 +15,14 @@ class CompanyController extends Controller
         $companies=DB::select('SELECT * from companies order by name asc');
         return view('company.companies',compact('companies'));
     }
+
     #FORMULARIO PARA EDITAR LA EMPRESA#
     public function editCompany($id)
     {
         $company = Company::find($id);
         return view('company.edit_company',compact('company'));
     }
+
     #ACTUALIZAR CAMPOS DE LA EMPRESA A LA BD3
     public function updateCompanyPost(Request $request,$id)
     {
@@ -31,6 +33,7 @@ class CompanyController extends Controller
         $company->save();
         return redirect()->route('show.companies')->with('editar',"La información de la empresa se ha actualizado.");
     }
+    
     #ELIMINAR UNA EMPRESA#
     public function deleteCompany($id)
     {

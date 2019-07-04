@@ -36,5 +36,6 @@ Route::post('/add-user-catalog','UserController@addCatalogPost')->name('add.cata
 Route::get('/delete-catalog/{id}','UserController@catalogDelete')->name('delete.catalog');
 #LICENSE#
 Route::get('/show-licenses','LicenseController@licenses')->name('show.licenses');
+Route::get('/add-licenses','LicenseController@addLicense')->name('add.license');
 Route::get('/license-edit/{id}','LicenseController@editLicense')->name('edit.license');
 Route::get('/license-delete/{id}','LicenseController@deleteLicense')->name('delete.license');
